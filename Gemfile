@@ -54,3 +54,7 @@ gem 'devise', '>= 3.2.4'
 gem 'simple_form'
 
 gem 'carrierwave'
+
+gem 'figaro'
+
+gem 'fog'
