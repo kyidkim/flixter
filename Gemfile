@@ -45,20 +45,13 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'rails_12factor', group: :production
-
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
-
 gem 'devise', '>= 3.2.4'
-
 gem 'simple_form'
-
 gem 'carrierwave'
-
 gem 'figaro'
-
 gem 'fog'
-
 gem 'mini_magick', '~> 4.3.1'
-
 gem 'carrierwave-aws'
+gem 'stripe'
