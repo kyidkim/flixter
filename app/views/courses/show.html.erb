@@ -2,16 +2,18 @@
 
 <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1 class="text-center"><%= @course.title %></h1>
-  <%= image_tag @course.image, class: 'img-responsive' %>
+  <%= image_tag @course.image, class: 'img-responsive center-block' %>
   <br />
   
   <br class="clr" />
   <br />
   
   <div class="col-sm-4 col-xs-12 text-center">
-    <span class="label label-default">
-      <%= number_to_currency @course.cost %>
-    </span>
+    <h4>
+      <span class="label label-default">
+        <%= number_to_currency @course.cost %>
+      </span>
+    </h4>
     
     <% if current_user && current_user == @course.user %>
     <br />
@@ -23,10 +25,10 @@
     <br />
     
     <% if current_user && current_user.enrolled_in?(@course) %>
-    <h3 class="label label-info">You are enrolled!</h3>
+    <h4 class="label label-info">You are enrolled!</h4>
     <% else %>
     <% if @course.free? %>
-    <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+    <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-success', method: :post %>
     <% else %>
     <%= form_tag course_enrollments_path(@course) do %>
     
