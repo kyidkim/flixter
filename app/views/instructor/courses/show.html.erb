@@ -69,13 +69,15 @@ $(function() {
               <br />
               <span class="glyphicon glyphicon-list"></span>
             </div>
-            <div class="col-xs-11 text-center">
-              <p>
+            <div class="col-xs-11">
+              <div class="lesson text-center">
+                <br />
+                <%= link_to lesson_path(lesson) do %>
                 <b><%= lesson.title %></b>
-              </p>
-              <p>
+                <br />
                 <%= lesson.subtitle %>
-              </p>
+                <% end %>
+              </div>
             </div>
             <br class="clr" />
           </li>
